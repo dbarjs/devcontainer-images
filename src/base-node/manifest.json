@@ -2,18 +2,19 @@
   "version": "0.0.1",
   "variants": [
     "lts",
+    "current",
     "iron",
     "hydrogen"
   ],
   "build": {
-    "latest": "latest",
+    "latest": "lts",
     "rootDistro": "debian",
     "architectures": {
       "lts": [
         "linux/amd64",
         "linux/arm64"
       ],
-      "latest": [
+      "current": [
         "linux/amd64",
         "linux/arm64"
       ],
@@ -32,6 +33,10 @@
     "variantTags": {
       "lts": [
         "base-node-devcontainer:lts"
+      ],
+      "current": [
+        "base-node-devcontainer:current",
+        "base-node-devcontainer:21"
       ],
       "iron": [
         "base-node-devcontainer:iron",

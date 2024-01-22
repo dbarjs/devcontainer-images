@@ -2,18 +2,19 @@
   "version": "0.0.1",
   "variants": [
     "lts",
+    "current",
     "iron",
     "hydrogen"
   ],
   "build": {
-    "latest": "latest",
+    "latest": "lts",
     "rootDistro": "debian",
     "architectures": {
       "lts": [
         "linux/amd64",
         "linux/arm64"
       ],
-      "latest": [
+      "current": [
         "linux/amd64",
         "linux/arm64"
       ],
@@ -33,7 +34,8 @@
       "lts": [
         "ts-node-devcontainer:lts"
       ],
-      "latest": [
+      "current": [
+        "ts-node-devcontainer:current",
         "ts-node-devcontainer:21"
       ],
       "iron": [
@@ -47,7 +49,7 @@
     }
   },
   "dependencies": {
-		"image": "node:${VARIANT}",
+		"image": "node:${VARIANT}-bookworm",
 		"imageLink": "https://hub.docker.com/_/node",
 		"debian": [
 			{
