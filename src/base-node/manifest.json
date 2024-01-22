@@ -1,7 +1,6 @@
 {
   "version": "0.0.1",
   "variants": [
-    "latest",
     "lts",
     "iron",
     "hydrogen"
@@ -33,10 +32,6 @@
     "variantTags": {
       "lts": [
         "base-node-devcontainer:lts"
-      ],
-      "latest": [
-        "base-node-devcontainer:latest",
-        "base-node-devcontainer:21"
       ],
       "iron": [
         "base-node-devcontainer:iron",

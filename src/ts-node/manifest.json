@@ -1,7 +1,6 @@
 {
   "version": "0.0.1",
   "variants": [
-    "latest",
     "lts",
     "iron",
     "hydrogen"
@@ -35,7 +34,6 @@
         "ts-node-devcontainer:lts"
       ],
       "latest": [
-        "ts-node-devcontainer:latest",
         "ts-node-devcontainer:21"
       ],
       "iron": [
