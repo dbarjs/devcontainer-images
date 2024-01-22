@@ -1,9 +1,9 @@
 {
 	"containerRegistry": "docker.io",
 	"containerRegistryPath": "dbarjs",
-	"stubRegistry": "mcr.microsoft.com",
-	"stubRegistryPath": "devcontainers",
-	"githubRepoName": "devcontainers/images",
+	"stubRegistry": "docker.io",
+	"stubRegistryPath": "dbarjs",
+	"githubRepoName": "dbarjs/devcontainer-images",
 	"containersPathInRepo": "src",
 	"historyFolderName": "history",
 	"historyUrlPrefix": "https://github.com/dbarjs/devcontainer-images/tree/main/src/",
