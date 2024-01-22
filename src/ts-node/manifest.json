@@ -28,23 +28,23 @@
       ]
     },
     "tags": [
-      "ts-node:${VARIANT}"
+      "ts-node-devcontainer:${VARIANT}"
     ],
     "variantTags": {
       "lts": [
-        "ts-node:lts"
+        "ts-node-devcontainer:lts"
       ],
       "latest": [
-        "ts-node:latest",
-        "ts-node:21"
+        "ts-node-devcontainer:latest",
+        "ts-node-devcontainer:21"
       ],
       "iron": [
-        "ts-node:iron",
-        "ts-node:20"
+        "ts-node-devcontainer:iron",
+        "ts-node-devcontainer:20"
       ],
       "hydrogen": [
-        "ts-node:hydrogen",
-        "ts-node:18"
+        "ts-node-devcontainer:hydrogen",
+        "ts-node-devcontainer:18"
       ]
     }
   },
