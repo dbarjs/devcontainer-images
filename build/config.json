@@ -1,14 +1,13 @@
 {
-	"containerRegistry": "devcon.azurecr.io",
-	"containerRegistryPath": "public/devcontainers",
-	"secondaryContainerRegistryPath": "public/vscode/devcontainers",
+	"containerRegistry": "docker.io",
+	"containerRegistryPath": "dbarjs",
 	"stubRegistry": "mcr.microsoft.com",
 	"stubRegistryPath": "devcontainers",
 	"githubRepoName": "devcontainers/images",
 	"containersPathInRepo": "src",
 	"historyFolderName": "history",
-	"historyUrlPrefix": "https://github.com/devcontainers/images/tree/main/src/",
-	"repositoryUrl": "https://github.com/devcontainers/images",
+	"historyUrlPrefix": "https://github.com/dbarjs/devcontainer-images/tree/main/src/",
+	"repositoryUrl": "https://github.com/dbarjs/devcontainer-images",
 	"imageLabelPrefix": "dev.containers",
 	"imageBuildConfigFile": "manifest.json",
 	"devContainerJsonPreamble": "For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:\n// ",
@@ -20,7 +19,7 @@
 		"package.json"
 	],
 
-	"needsDedicatedPage": [ 
+	"needsDedicatedPage": [
 		"universal",
 		"php",
 		"python"

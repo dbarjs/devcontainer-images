@@ -1,0 +1,77 @@
+{
+  "version": "0.0.1",
+  "variants": [
+    "latest",
+    "lts",
+    "iron",
+    "hydrogen"
+  ],
+  "build": {
+    "latest": "latest",
+    "rootDistro": "debian",
+    "architectures": {
+      "lts": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "latest": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "iron": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "hydrogen": [
+        "linux/amd64",
+        "linux/arm64"
+      ]
+    },
+    "tags": [
+      "base-node:${VARIANT}"
+    ],
+    "variantTags": {
+      "lts": [
+        "base-node:lts"
+      ],
+      "latest": [
+        "base-node:latest",
+        "base-node:21"
+      ],
+      "iron": [
+        "base-node:iron",
+        "base-node:20"
+      ],
+      "hydrogen": [
+        "base-node:hydrogen",
+        "base-node:18"
+      ]
+    }
+  },
+  "dependencies": {
+    "image": "node:${VARIANT}-bookworm",
+    "imageLink": "https://hub.docker.com/_/node",
+    "apt": [
+      {
+        "cgIgnore": false,
+        "name": "yarn"
+      }
+    ],
+    "git": {
+      "Oh My Zsh!": "/home/node/.oh-my-zsh",
+      "nvm": "/usr/local/share/nvm"
+    },
+    "npm": [
+      "eslint"
+    ],
+    "languages": {
+      "Node.js": {
+        "cgIgnore": true,
+        "path": "/usr/local"
+      }
+    },
+    "other": {
+      "git": { }
+    }
+  }
+}

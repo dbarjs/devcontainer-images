@@ -1,17 +1,23 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
-    "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/devcontainers/features/azure-cli:1": {}
-    },
-    "postCreateCommand": "npm install -g @devcontainers/cli",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "mads-hartmann.bash-ide-vscode",
-                "dbaeumer.vscode-eslint",
-                "EditorConfig.EditorConfig"
-            ]
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": { }
+  },
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "devcontainers/features": {
+          "permissions": "write-all"
         }
+      }
+    },
+    "vscode": {
+      "extensions": [
+        "mads-hartmann.bash-ide-vscode",
+        "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig"
+      ]
     }
+  },
+  "postCreateCommand": "npm install -g @devcontainers/cli ni"
 }
