@@ -46,7 +46,7 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 1. First, build the image(s) using the CLI as follows:
 
    ```bash
-   build/vscdc push --no-push --registry docker.io --registry-path dbarjs --release main <your-image-name-here>
+   build/vscdc push --no-push --release main <your-image-name-here>
    ```
 
 2. Use the Docker CLI to verify all of the expected images and tags and have the right contents:
@@ -58,13 +58,13 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 3. Test manifest generation by running:
 
    ```bash
-   build/vscdc cg --registry docker.io --registry-path dbarjs --release main <your-image-name-here>
+   build/vscdc cg --release main <your-image-name-here>
    ```
 
 4. Test markdown image history by running:
 
     ```bash
-        build/vscdc info --build --markdown --overwrite --registry docker.io --registry-path dbarjs --release main <your-image-name-here>
+        build/vscdc info --build --markdown --overwrite --release main <your-image-name-here>
     ```
 
 ## Creating a `Dockerfile`

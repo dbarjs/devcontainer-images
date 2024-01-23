@@ -2,15 +2,6 @@
     "Registrations": [
         {
             "Component": {
-                "Type": "npm",
-                "Npm": {
-                    "Name": "eslint",
-                    "Version": "8.56.0"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "git",
                 "Git": {
                     "Name": "Oh My Zsh!",
@@ -44,7 +35,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
-                    "Version": "lts-bookworm",
+                    "Version": "current-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
             }
@@ -54,7 +45,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
-                    "Version": "current-bookworm",
+                    "Version": "lts-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
             }

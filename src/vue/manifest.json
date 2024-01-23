@@ -1,8 +1,8 @@
 {
   "version": "0.5.4",
   "variants": [
-    "lts",
-    "current"
+    "current",
+    "lts"
   ],
   "build": {
     "latest": "current",
@@ -18,12 +18,14 @@
         "vue-devcontainer:21",
         "vue-devcontainer:21-bookworm",
         "vue-devcontainer:bookworm",
+        "vue-devcontainer:current",
         "vue-devcontainer:current-bookworm",
         "vue-devcontainer:latest",
         "vue-devcontainer:${VERSION}",
         "vue-devcontainer:${VERSION}-21",
         "vue-devcontainer:${VERSION}-21-bookworm",
         "vue-devcontainer:${VERSION}-bookworm",
+        "vue-devcontainer:${VERSION}-current",
         "vue-devcontainer:${VERSION}-current-bookworm",
         "vue-devcontainer:${VERSION}-latest"
       ],
@@ -32,12 +34,14 @@
         "vue-devcontainer:20-bookworm",
         "vue-devcontainer:iron",
         "vue-devcontainer:iron-bookworm",
+        "vue-devcontainer:lts",
         "vue-devcontainer:lts-iron",
         "vue-devcontainer:lts-bookworm",
         "vue-devcontainer:${VERSION}-20",
         "vue-devcontainer:${VERSION}-20-bookworm",
         "vue-devcontainer:${VERSION}-iron",
         "vue-devcontainer:${VERSION}-iron-bookworm",
+        "vue-devcontainer:${VERSION}-lts",
         "vue-devcontainer:${VERSION}-lts-iron",
         "vue-devcontainer:${VERSION}-lts-bookworm"
       ]
