@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.4",
   "variants": [
     "lts",
     "current"
@@ -13,13 +13,10 @@
     ],
     "variantTags": {
       "current": [
-        "base-node-devcontainer:${VERSION}-current",
-        "base-node-devcontainer:${VERSION}-21"
+        "base-node-devcontainer:${VERSION}-current"
       ],
       "lts": [
-        "base-node-devcontainer:${VERSION}-lts",
-        "base-node-devcontainer:${VERSION}-iron",
-        "base-node-devcontainer:${VERSION}-20"
+        "base-node-devcontainer:${VERSION}-lts"
       ]
     }
   },
