@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.3.2",
   "variants": [
     "lts",
     "current"
@@ -7,26 +7,29 @@
   "build": {
     "latest": "current",
     "rootDistro": "debian",
-    "architectures": [ "linux/amd64", "linux/arm64" ],
+    "architectures": [
+      "linux/amd64",
+      "linux/arm64"
+    ],
     "tags": [
-      "base-node-devcontainer:${VERSION}-${VARIANT}"
+      "node-essential-devcontainer:${VERSION}-${VARIANT}"
     ],
     "variantTags": {
-      "current": [
-        "base-node-devcontainer:${VERSION}-current",
-        "base-node-devcontainer:${VERSION}-21"
-      ],
       "lts": [
-        "base-node-devcontainer:${VERSION}-lts",
-        "base-node-devcontainer:${VERSION}-iron",
-        "base-node-devcontainer:${VERSION}-20"
+        "node-essential-devcontainer:${VERSION}-lts",
+        "node-essential-devcontainer:${VERSION}-iron",
+        "node-essential-devcontainer:${VERSION}-20"
+      ],
+      "current": [
+        "node-essential-devcontainer:${VERSION}-current",
+        "node-essential-devcontainer:${VERSION}-21"
       ]
     }
   },
   "dependencies": {
     "image": "node:${VARIANT}-bookworm",
     "imageLink": "https://hub.docker.com/_/node",
-    "apt": [
+    "debian": [
       {
         "cgIgnore": false,
         "name": "yarn"
@@ -37,7 +40,9 @@
       "nvm": "/usr/local/share/nvm"
     },
     "npm": [
-      "eslint"
+      "eslint",
+      "tslint-to-eslint-config",
+      "typescript"
     ],
     "languages": {
       "Node.js": {

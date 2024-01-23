@@ -1,0 +1,123 @@
+{
+  "name": "Node.js: Essential",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": { },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": { },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": { }
+  },
+
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "antfu.iconify",
+        "lokalise.i18n-ally",
+        "antfu.browse-lite",
+        "antfu.slidev",
+        "antfu.unocss",
+        "bradlc.vscode-tailwindcss",
+        "Vue.volar",
+        "antfu.vite"
+      ],
+      "settings": {
+        // ========== UX - Search ==========
+        "search.exclude": {
+          "**/*.snap": true,
+          "**/*.svg": true,
+          "**/.git": true,
+          "**/.github": false,
+          "**/.nuxt": true,
+          "**/.output": true,
+          "**/.pnpm": true,
+          "**/.vscode": true,
+          "**/.yarn": true,
+          "**/assets": true,
+          "**/bower_components": true,
+          "**/dist/**": true,
+          "**/logs": true,
+          "**/node_modules": true,
+          "**/out/**": true,
+          "**/package-lock.json": true,
+          "**/pnpm-lock.yaml": true,
+          "**/public": true,
+          "**/temp": true,
+          "**/yarn.lock": true,
+          "**/CHANGELOG*": true,
+          "**/LICENSE*": true
+        },
+
+        // ========== Extension Settings ==========
+        "github.copilot.enable": {
+          "*": true,
+          "markdown": true,
+          "plaintext": false
+        },
+        "gitlens.codeLens.authors.enabled": false,
+        "gitlens.codeLens.enabled": false,
+        "gitlens.codeLens.recentChange.enabled": false,
+        "gitlens.menus": {
+          "editor": {
+            "blame": false,
+            "clipboard": true,
+            "compare": true,
+            "history": false,
+            "remote": false
+          },
+          "editorGroup": {
+            "blame": true,
+            "compare": false
+          },
+          "editorTab": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+          },
+          "explorer": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+          },
+          "scm": {
+            "authors": true
+          },
+          "scmGroup": {
+            "compare": true,
+            "openClose": true,
+            "stash": true
+          },
+          "scmGroupInline": {
+            "stash": true
+          },
+          "scmItem": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": false,
+            "stash": true
+          }
+        },
+        "iconify.annotations": true,
+        "iconify.inplace": true,
+        "i18n-ally.autoDetection": false,
+        "i18n-ally.displayLanguage": "en",
+        "svg.preview.mode": "svg"
+      }
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "yarn install",
+
+  // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "node"
+}

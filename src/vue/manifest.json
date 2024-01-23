@@ -2,35 +2,27 @@
   "version": "0.3.2",
   "variants": [
     "lts",
-    "current",
-    "iron",
-    "hydrogen"
+    "current"
   ],
   "build": {
-    "latest": "lts",
+    "latest": "current",
     "rootDistro": "debian",
     "architectures": [
       "linux/amd64",
       "linux/arm64"
     ],
     "tags": [
-      "ts-node-devcontainer:${VERSION}-${VARIANT}"
+      "vue-devcontainer:${VERSION}-${VARIANT}"
     ],
     "variantTags": {
       "lts": [
-        "ts-node-devcontainer:${VERSION}-lts"
+        "vue-devcontainer:${VERSION}-lts",
+        "vue-devcontainer:${VERSION}-iron",
+        "vue-devcontainer:${VERSION}-20"
       ],
       "current": [
-        "ts-node-devcontainer:${VERSION}-current",
-        "ts-node-devcontainer:${VERSION}-21"
-      ],
-      "iron": [
-        "ts-node-devcontainer:${VERSION}-iron",
-        "ts-node-devcontainer:${VERSION}-20"
-      ],
-      "hydrogen": [
-        "ts-node-devcontainer:${VERSION}-hydrogen",
-        "ts-node-devcontainer:${VERSION}-18"
+        "vue-devcontainer:${VERSION}-current",
+        "vue-devcontainer:${VERSION}-21"
       ]
     }
   },
@@ -56,12 +48,6 @@
       "Node.js": {
         "cgIgnore": true,
         "path": "/usr/local"
-      },
-      "TypeScript": {
-        "cgIgnore": true,
-        "versionCommand": "tsc --version | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-        "path": "/usr/local/share/npm-global",
-        "downloadUrl": "https://www.typescriptlang.org/"
       }
     },
     "other": {

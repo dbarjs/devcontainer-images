@@ -24,8 +24,23 @@
     "vscode": {
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        "dbaeumer.vscode-eslint"
-      ]
+        "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode"
+      ],
+
+      "settings": {
+        // ========== Lint & Format ==========
+        "editor.formatOnSave": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "files.eol": "\n",
+        "files.insertFinalNewline": true,
+
+        // ========== antfu/eslint-config ==========
+        "eslint.experimental.useFlatConfig": true,
+        "prettier.enable": false
+      }
     }
   },
 
@@ -36,5 +51,9 @@
   // "postCreateCommand": "yarn install",
 
   // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  "remoteUser": "node"
+  "remoteUser": "node",
+
+  "mounts": [
+    "source=devcontainer-zshhistory,target=/commandhistory,type=volume"
+  ]
 }
