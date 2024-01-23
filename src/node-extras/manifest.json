@@ -1,32 +1,52 @@
 {
-  "version": "0.5.4",
+  "version": "0.5.1",
   "variants": [
-    "lts",
-    "current"
+    "current",
+    "lts"
   ],
   "build": {
     "latest": "current",
     "rootDistro": "debian",
     "architectures": [
-      "linux/amd64",
-      "linux/arm64"
+      "linux/amd64"
     ],
     "tags": [
       "node-extras-devcontainer:${VERSION}-${VARIANT}"
     ],
     "variantTags": {
-      "lts": [
-        "node-extras-devcontainer:${VERSION}-lts"
-      ],
       "current": [
-        "node-extras-devcontainer:${VERSION}-current"
+        "node-extras-devcontainer:21",
+        "node-extras-devcontainer:21-bookworm",
+        "node-extras-devcontainer:bookworm",
+        "node-extras-devcontainer:current-bookworm",
+        "node-extras-devcontainer:latest",
+        "node-extras-devcontainer:${VERSION}",
+        "node-extras-devcontainer:${VERSION}-21",
+        "node-extras-devcontainer:${VERSION}-21-bookworm",
+        "node-extras-devcontainer:${VERSION}-bookworm",
+        "node-extras-devcontainer:${VERSION}-current-bookworm",
+        "node-extras-devcontainer:${VERSION}-latest"
+      ],
+      "lts": [
+        "node-extras-devcontainer:20",
+        "node-extras-devcontainer:20-bookworm",
+        "node-extras-devcontainer:iron",
+        "node-extras-devcontainer:iron-bookworm",
+        "node-extras-devcontainer:lts-iron",
+        "node-extras-devcontainer:lts-bookworm",
+        "node-extras-devcontainer:${VERSION}-20",
+        "node-extras-devcontainer:${VERSION}-20-bookworm",
+        "node-extras-devcontainer:${VERSION}-iron",
+        "node-extras-devcontainer:${VERSION}-iron-bookworm",
+        "node-extras-devcontainer:${VERSION}-lts-iron",
+        "node-extras-devcontainer:${VERSION}-lts-bookworm"
       ]
     }
   },
   "dependencies": {
     "image": "node:${VARIANT}-bookworm",
     "imageLink": "https://hub.docker.com/_/node",
-    "debian": [
+    "apt": [
       {
         "cgIgnore": false,
         "name": "yarn"
@@ -36,21 +56,10 @@
       "Oh My Zsh!": "/home/node/.oh-my-zsh",
       "nvm": "/usr/local/share/nvm"
     },
-    "npm": [
-      "eslint",
-      "tslint-to-eslint-config",
-      "typescript"
-    ],
     "languages": {
       "Node.js": {
         "cgIgnore": true,
         "path": "/usr/local"
-      },
-      "TypeScript": {
-        "cgIgnore": true,
-        "versionCommand": "tsc --version | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-        "path": "/usr/local/share/npm-global",
-        "downloadUrl": "https://www.typescriptlang.org/"
       }
     },
     "other": {

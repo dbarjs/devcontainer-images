@@ -4,10 +4,10 @@ This folder contains scripts to build and push images into the Microsoft Contain
 
 ## Build CLI
 
-The Node.js based build CLI (`build/vsdc`) has commands to:
+The Node.js based build CLI (`build/vscdc`) has commands to:
 
-1. Build and push to a repository: `build/vsdc push`
-2. Generate cgmanifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
+1. Build and push to a repository: `build/vscdc push`
+2. Generate cgmanifest.json and history markdown files: `build/vscdc cg`, `build/vscdc info`
 
 Run with the `--help` option to see inputs.
 
@@ -46,25 +46,25 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 1. First, build the image(s) using the CLI as follows:
 
    ```bash
-   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
+   build/vscdc push --no-push --registry docker.io --registry-path dbarjs --release main <your-image-name-here>
    ```
 
 2. Use the Docker CLI to verify all of the expected images and tags and have the right contents:
 
     ```bash
-    docker run -it --init --privileged --rm mcr.microsoft.com/devcontainers/<expected-repository>:dev-<expected tag> bash
+    docker run -it --init --privileged --rm docker.io/dbarjs/<expected-repository>:dev-<expected tag> bash
     ```
 
 3. Test manifest generation by running:
 
    ```bash
-   build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
+   build/vscdc cg --registry docker.io --registry-path dbarjs --release main <your-image-name-here>
    ```
 
 4. Test markdown image history by running:
 
     ```bash
-        build/vscdc info --build --markdown --overwrite --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
+        build/vscdc info --build --markdown --overwrite --registry docker.io --registry-path dbarjs --release main <your-image-name-here>
     ```
 
 ## Creating a `Dockerfile`

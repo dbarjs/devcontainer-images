@@ -5,19 +5,28 @@
 **Source release/branch:** [main](https://github.com/dbarjs/devcontainer-images/tree/main/src/base-node)
 
 **Image variations:**
-- [lts](#variant-lts)
 - [current](#variant-current)
+- [lts](#variant-lts)
 
-## Variant: lts
+## Variant: current
 
 **Digest:** N/A
 
 **Tags:**
 ```
-docker.io/dbarjs/base-node-devcontainer:dev-lts
-docker.io/dbarjs/base-node-devcontainer:dev-lts
-docker.io/dbarjs/base-node-devcontainer:dev-iron
-docker.io/dbarjs/base-node-devcontainer:dev-20
+docker.io/dbarjs/base-node-devcontainer:dev-current
+docker.io/dbarjs/base-node-devcontainer:21
+docker.io/dbarjs/base-node-devcontainer:21-bookworm
+docker.io/dbarjs/base-node-devcontainer:bookworm
+docker.io/dbarjs/base-node-devcontainer:current-bookworm
+docker.io/dbarjs/base-node-devcontainer:latest
+docker.io/dbarjs/base-node-devcontainer:dev
+docker.io/dbarjs/base-node-devcontainer:dev-bookworm
+docker.io/dbarjs/base-node-devcontainer:dev-21
+docker.io/dbarjs/base-node-devcontainer:dev-21-bookworm
+docker.io/dbarjs/base-node-devcontainer:dev-bookworm
+docker.io/dbarjs/base-node-devcontainer:dev-current-bookworm
+docker.io/dbarjs/base-node-devcontainer:dev-latest
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -32,7 +41,7 @@ docker.io/dbarjs/base-node-devcontainer:dev-20
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 20.11.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 21.6.0 | /usr/local |
 
 **Tools installed using git**
 
@@ -96,15 +105,25 @@ docker.io/dbarjs/base-node-devcontainer:dev-20
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b2 |
 
-## Variant: current
+## Variant: lts
 
 **Digest:** N/A
 
 **Tags:**
 ```
-docker.io/dbarjs/base-node-devcontainer:dev-current
-docker.io/dbarjs/base-node-devcontainer:dev-current
-docker.io/dbarjs/base-node-devcontainer:dev-21
+docker.io/dbarjs/base-node-devcontainer:dev-lts
+docker.io/dbarjs/base-node-devcontainer:20
+docker.io/dbarjs/base-node-devcontainer:20-bookworm
+docker.io/dbarjs/base-node-devcontainer:iron
+docker.io/dbarjs/base-node-devcontainer:iron-bookworm
+docker.io/dbarjs/base-node-devcontainer:lts-iron
+docker.io/dbarjs/base-node-devcontainer:lts-bookworm
+docker.io/dbarjs/base-node-devcontainer:dev-20
+docker.io/dbarjs/base-node-devcontainer:dev-20-bookworm
+docker.io/dbarjs/base-node-devcontainer:dev-iron
+docker.io/dbarjs/base-node-devcontainer:dev-iron-bookworm
+docker.io/dbarjs/base-node-devcontainer:dev-lts-iron
+docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -119,7 +138,7 @@ docker.io/dbarjs/base-node-devcontainer:dev-21
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 21.6.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 20.11.0 | /usr/local |
 
 **Tools installed using git**
 

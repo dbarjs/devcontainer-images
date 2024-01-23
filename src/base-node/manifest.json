@@ -1,22 +1,45 @@
 {
   "version": "0.5.4",
   "variants": [
-    "lts",
-    "current"
+    "current",
+    "lts"
   ],
   "build": {
     "latest": "current",
     "rootDistro": "debian",
-    "architectures": [ "linux/amd64", "linux/arm64" ],
+    "architectures": [
+      "linux/amd64"
+    ],
     "tags": [
       "base-node-devcontainer:${VERSION}-${VARIANT}"
     ],
     "variantTags": {
       "current": [
-        "base-node-devcontainer:${VERSION}-current"
+        "base-node-devcontainer:21",
+        "base-node-devcontainer:21-bookworm",
+        "base-node-devcontainer:bookworm",
+        "base-node-devcontainer:current-bookworm",
+        "base-node-devcontainer:latest",
+        "base-node-devcontainer:${VERSION}",
+        "base-node-devcontainer:${VERSION}-21",
+        "base-node-devcontainer:${VERSION}-21-bookworm",
+        "base-node-devcontainer:${VERSION}-bookworm",
+        "base-node-devcontainer:${VERSION}-current-bookworm",
+        "base-node-devcontainer:${VERSION}-latest"
       ],
       "lts": [
-        "base-node-devcontainer:${VERSION}-lts"
+        "base-node-devcontainer:20",
+        "base-node-devcontainer:20-bookworm",
+        "base-node-devcontainer:iron",
+        "base-node-devcontainer:iron-bookworm",
+        "base-node-devcontainer:lts-iron",
+        "base-node-devcontainer:lts-bookworm",
+        "base-node-devcontainer:${VERSION}-20",
+        "base-node-devcontainer:${VERSION}-20-bookworm",
+        "base-node-devcontainer:${VERSION}-iron",
+        "base-node-devcontainer:${VERSION}-iron-bookworm",
+        "base-node-devcontainer:${VERSION}-lts-iron",
+        "base-node-devcontainer:${VERSION}-lts-bookworm"
       ]
     }
   },
@@ -33,9 +56,6 @@
       "Oh My Zsh!": "/home/node/.oh-my-zsh",
       "nvm": "/usr/local/share/nvm"
     },
-    "npm": [
-      "eslint"
-    ],
     "languages": {
       "Node.js": {
         "cgIgnore": true,

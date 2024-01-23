@@ -1,32 +1,52 @@
 {
   "version": "0.5.1",
   "variants": [
-    "lts",
-    "current"
+    "current",
+    "lts"
   ],
   "build": {
     "latest": "current",
     "rootDistro": "debian",
     "architectures": [
-      "linux/amd64",
-      "linux/arm64"
+      "linux/amd64"
     ],
     "tags": [
       "node-essential-devcontainer:${VERSION}-${VARIANT}"
     ],
     "variantTags": {
-      "lts": [
-        "node-essential-devcontainer:${VERSION}-lts"
-      ],
       "current": [
-        "node-essential-devcontainer:${VERSION}-current"
+        "node-essential-devcontainer:21",
+        "node-essential-devcontainer:21-bookworm",
+        "node-essential-devcontainer:bookworm",
+        "node-essential-devcontainer:current-bookworm",
+        "node-essential-devcontainer:latest",
+        "node-essential-devcontainer:${VERSION}",
+        "node-essential-devcontainer:${VERSION}-21",
+        "node-essential-devcontainer:${VERSION}-21-bookworm",
+        "node-essential-devcontainer:${VERSION}-bookworm",
+        "node-essential-devcontainer:${VERSION}-current-bookworm",
+        "node-essential-devcontainer:${VERSION}-latest"
+      ],
+      "lts": [
+        "node-essential-devcontainer:20",
+        "node-essential-devcontainer:20-bookworm",
+        "node-essential-devcontainer:iron",
+        "node-essential-devcontainer:iron-bookworm",
+        "node-essential-devcontainer:lts-iron",
+        "node-essential-devcontainer:lts-bookworm",
+        "node-essential-devcontainer:${VERSION}-20",
+        "node-essential-devcontainer:${VERSION}-20-bookworm",
+        "node-essential-devcontainer:${VERSION}-iron",
+        "node-essential-devcontainer:${VERSION}-iron-bookworm",
+        "node-essential-devcontainer:${VERSION}-lts-iron",
+        "node-essential-devcontainer:${VERSION}-lts-bookworm"
       ]
     }
   },
   "dependencies": {
     "image": "node:${VARIANT}-bookworm",
     "imageLink": "https://hub.docker.com/_/node",
-    "debian": [
+    "apt": [
       {
         "cgIgnore": false,
         "name": "yarn"
@@ -36,11 +56,6 @@
       "Oh My Zsh!": "/home/node/.oh-my-zsh",
       "nvm": "/usr/local/share/nvm"
     },
-    "npm": [
-      "eslint",
-      "tslint-to-eslint-config",
-      "typescript"
-    ],
     "languages": {
       "Node.js": {
         "cgIgnore": true,
