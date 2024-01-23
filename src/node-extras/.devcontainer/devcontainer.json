@@ -1,5 +1,5 @@
 {
-  "name": "Node.js: Essential",
+  "name": "Node.js: Extras",
   "build": {
     "dockerfile": "Dockerfile"
   },

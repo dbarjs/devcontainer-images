@@ -1,5 +1,5 @@
 {
-  "name": "Node.js: Essential",
+  "name": "Vue.js",
   "build": {
     "dockerfile": "Dockerfile"
   },
