@@ -7,7 +7,7 @@ const path = require('path');
 const asyncUtils = require('./utils/async');
 const configUtils = require('./utils/config');
 const handlebars = require('handlebars');
-const mkdirp = require('mkdirp');
+
 const scriptSHA = {};
 
 const assetsPath = path.join(__dirname, '..', 'assets');
@@ -18,6 +18,9 @@ const stubPromises = {
 }
 
 const dockerFilePreamble = configUtils.getConfig('dockerFilePreamble');
+
+// TODO: Remove this once the script library is moved to the repo
+const scriptLibraryPathInRepo = configUtils.getConfig('scriptLibraryPathInRepo') || '';
 
 const historyUrlPrefix = configUtils.getConfig('historyUrlPrefix');
 const repositoryUrl = configUtils.getConfig('repositoryUrl');
@@ -31,7 +34,7 @@ async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, re
     // Use exact version of building, MAJOR if not
     const version = isForBuild ? configUtils.getVersionFromRelease(release, definitionId) : configUtils.majorFromRelease(release, definitionId);
 
-    // Create initial result object 
+    // Create initial result object
     const prepResult = {
         shouldFlattenBaseImage: false,
         baseImage: null,

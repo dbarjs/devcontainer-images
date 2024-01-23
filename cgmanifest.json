@@ -11,6 +11,24 @@
         },
         {
             "Component": {
+                "Type": "npm",
+                "Npm": {
+                    "Name": "tslint-to-eslint-config",
+                    "Version": "2.14.3"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "npm",
+                "Npm": {
+                    "Name": "typescript",
+                    "Version": "5.3.3"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "git",
                 "Git": {
                     "Name": "Oh My Zsh!",
@@ -45,16 +63,6 @@
                 "Other": {
                     "Name": "Docker Image: node",
                     "Version": "lts-bookworm",
-                    "DownloadUrl": "https://hub.docker.com/_/node"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: node",
-                    "Version": "current-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
             }

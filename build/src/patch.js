@@ -26,7 +26,7 @@ async function patch(patchPath, registry, registryPath) {
     if (patchConfig.deleteUntaggedImages && patchConfig.imageIds) {
         await deleteUntaggedImages(patchConfig.imageIds, registry);
     }
-    
+
     console.log('\n(*) Done!')
 }
 
@@ -59,7 +59,7 @@ async function patchImage(imageId, patchPath, dockerFilePath, bumpVersion, regis
     let retry = false;
     do {
         try {
-            await asyncUtils.spawn('docker', [ 
+            await asyncUtils.spawn('docker', [
                 'build',
                 '--pull',
                 '--build-arg',
@@ -68,7 +68,7 @@ async function patchImage(imageId, patchPath, dockerFilePath, bumpVersion, regis
                 .concat('-f', dockerFilePath, patchPath), spawnOpts);
         } catch (ex) {
             // Try to clean out unused images and retry once if get an out of storage response
-            if (ex.result && ex.result.indexOf('no space left on device') >= 0 && retry === false) {
+            if (ex.result && ex.result.toLowerCase().indexOf('no space left on device') >= 0 && retry === false) {
                 console.log(`(*) Out of space - pruning all unused images...`);
                 await asyncUtils.spawn('docker', ['image', 'prune', '--all', '--force'], spawnOpts);
                 console.log(`(*) Retrying...`);
@@ -76,7 +76,7 @@ async function patchImage(imageId, patchPath, dockerFilePath, bumpVersion, regis
             } else {
                 throw ex;
             }
-        }    
+        }
     } while (retry);
 
     // Push updates
@@ -172,7 +172,7 @@ async function getImageRepositoryAndTags(imageId, registry) {
             { shell: true, stdio: 'pipe' });
         const additionalTags = JSON.parse(tagListOutput);
         repoAndTagList = repoAndTagList.concat(additionalTags.map((tag) => {
-            return { 
+            return {
                 repository:repository,
                 tag:tag
             };

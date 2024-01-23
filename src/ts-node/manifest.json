@@ -9,24 +9,10 @@
   "build": {
     "latest": "lts",
     "rootDistro": "debian",
-    "architectures": {
-      "lts": [
-        "linux/amd64",
-        "linux/arm64"
-      ],
-      "current": [
-        "linux/amd64",
-        "linux/arm64"
-      ],
-      "iron": [
-        "linux/amd64",
-        "linux/arm64"
-      ],
-      "hydrogen": [
-        "linux/amd64",
-        "linux/arm64"
-      ]
-    },
+    "architectures": [
+      "linux/amd64",
+      "linux/arm64"
+    ],
     "tags": [
       "ts-node-devcontainer:${VERSION}-${VARIANT}"
     ],
@@ -49,37 +35,37 @@
     }
   },
   "dependencies": {
-		"image": "node:${VARIANT}-bookworm",
-		"imageLink": "https://hub.docker.com/_/node",
-		"debian": [
-			{
-				"cgIgnore": false,
-				"name": "yarn"
-			}
-		],
-		"git": {
-			"Oh My Zsh!": "/home/node/.oh-my-zsh",
-			"nvm": "/usr/local/share/nvm"
-		},
-		"npm": [
-			"eslint",
-			"tslint-to-eslint-config",
-			"typescript"
-		],
-		"languages": {
-			"Node.js": {
-				"cgIgnore": true,
-				"path": "/usr/local"
-			},
-			"TypeScript": {
-				"cgIgnore": true,
-				"versionCommand": "tsc --version | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-				"path": "/usr/local/share/npm-global",
-				"downloadUrl": "https://www.typescriptlang.org/"
-			}
-		},
-		"other": {
-			"git": {}
-		}
-	}
+    "image": "node:${VARIANT}-bookworm",
+    "imageLink": "https://hub.docker.com/_/node",
+    "debian": [
+      {
+        "cgIgnore": false,
+        "name": "yarn"
+      }
+    ],
+    "git": {
+      "Oh My Zsh!": "/home/node/.oh-my-zsh",
+      "nvm": "/usr/local/share/nvm"
+    },
+    "npm": [
+      "eslint",
+      "tslint-to-eslint-config",
+      "typescript"
+    ],
+    "languages": {
+      "Node.js": {
+        "cgIgnore": true,
+        "path": "/usr/local"
+      },
+      "TypeScript": {
+        "cgIgnore": true,
+        "versionCommand": "tsc --version | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+        "path": "/usr/local/share/npm-global",
+        "downloadUrl": "https://www.typescriptlang.org/"
+      }
+    },
+    "other": {
+      "git": { }
+    }
+  }
 }

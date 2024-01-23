@@ -12,7 +12,7 @@ const linuxPackageInfoExtractionConfig = {
         // Command to get package versions: dpkg-query --show -f='${Package}\t${Version}\n' <package>
         // Output: <package>    <version>
         // Command to get download URLs: apt-get update && apt-get install -y --reinstall --print-uris
-        // Output: Multi-line output, but each line is '<download URL>.deb' <package>_<version>_<architecture>.deb <size> <checksum> 
+        // Output: Multi-line output, but each line is '<download URL>.deb' <package>_<version>_<architecture>.deb <size> <checksum>
         namePrefix: 'Debian Package:',
         listCommand: "dpkg-query --show -f='\\${Package} ~~v~~ \\${Version}\n'",
         lineRegEx: /(.+) ~~v~~ (.+)/,
@@ -71,7 +71,7 @@ async function getLinuxDistroInfo(imageTagOrContainerName) {
         const infoLineParts = infoLine.split('=');
         if (infoLineParts.length === 2) {
             const propName = snakeCaseToCamelCase(infoLineParts[0].trim());
-            info[propName] = infoLineParts[1].replace(/"/g,'').trim();    
+            info[propName] = infoLineParts[1].replace(/"/g,'').trim();
         }
     })
     return info;
@@ -97,7 +97,7 @@ function snakeCaseToCamelCase(variableName) {
 }
 
 Defaults to "cgIgnore": true, "markdownIgnore": false given base packages don't need to be registered
-*/   
+*/
 async function getLinuxPackageInfo(imageTagOrContainerName, packageList, linuxDistroInfo) {
     // Merge in default dependencies
     packageList = packageList || [];
@@ -135,12 +135,12 @@ async function getLinuxPackageInfo(imageTagOrContainerName, packageList, linuxDi
 
     // Generate and exec command to get installed package versions
     console.log('(*) Gathering information about Linux package versions...');
-    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 
+    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName,
         extractionConfig.listCommand + packageListCommandPart + " || echo 'Some packages were not found.'", true);
-   
+
     // Generate and exec command to extract download URIs
     console.log('(*) Gathering information about Linux package download URLs...');
-    const packageUriCommandOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 
+    const packageUriCommandOutput = await getCommandOutputFromContainer(imageTagOrContainerName,
         extractionConfig.getUriCommand + packageListCommandPart + " || echo 'Some packages were not found.'", true);
 
     const componentList = [];
@@ -181,7 +181,7 @@ async function getLinuxPackageInfo(imageTagOrContainerName, packageList, linuxDi
 
 // Gets a package pool URL out of a download URL - Needed for registering in cgmanifest.json
 function getPoolUrlFromPackageVersionListOutput(packageUriCommandOutput, config, package, version) {
-    // Handle regex reserved charters in regex strings and that ":" is treaded as "1%3a" on Debian/Ubuntu 
+    // Handle regex reserved charters in regex strings and that ":" is treaded as "1%3a" on Debian/Ubuntu
     const sanitizedPackage = package.replace(/\+/g, '\\+').replace(/\./g, '\\.');
     const sanitizedVersion = version.replace(/\+/g, '\\+').replace(/\./g, '\\.').replace(/:/g, '%3a');
     const uriCaptureGroup = new RegExp(
@@ -192,7 +192,7 @@ function getPoolUrlFromPackageVersionListOutput(packageUriCommandOutput, config,
         const fallbackPoolUrl = configUtils.getFallbackPoolUrl(package);
         if (fallbackPoolUrl) {
             return fallbackPoolUrl;
-        } 
+        }
         console.log(`(!) No URI found for ${package} ${version}.`);
         return null;
     }
@@ -212,7 +212,7 @@ async function getNpmGlobalPackageInfo(imageTagOrContainerName, packageList) {
     packageList = packageList || [];
     const defaultPackages = configUtils.getDefaultDependencies('npm') || [];
     packageList = defaultPackages.concat(packageList);
-    
+
     // Return empty array if no packages
     if (packageList.length === 0) {
         return [];
@@ -235,7 +235,7 @@ async function getNpmGlobalPackageInfo(imageTagOrContainerName, packageList) {
                     packageJson = packageDependencies[package];
                     if(packageJson) {
                         break;
-                    }    
+                    }
                 }
             }
         }
@@ -261,7 +261,7 @@ async function getPipPackageInfo(imageTagOrContainerName, packageList, usePipx, 
     packageList = packageList || [];
     const defaultPackages = configUtils.getDefaultDependencies(usePipx ? 'pipx' : 'pip') || [];
     packageList = defaultPackages.concat(packageList);
-    
+
     // Return empty array if no packages
     if (packageList.length === 0) {
         return [];
@@ -423,7 +423,7 @@ async function getGemPackageInfo(imageTagOrContainerName, packageList) {
     packageList = packageList || [];
     const defaultPackages = configUtils.getDefaultDependencies('gem') || [];
     packageList = defaultPackages.concat(packageList);
-    
+
     // Return empty array if no packages
     if (packageList.length === 0) {
         return [];
@@ -547,7 +547,7 @@ async function getImageInfo(imageTagOrContainerName) {
         const imageNameAndDigest = await asyncUtils.spawn('docker', ['inspect', "--format='{{index .RepoDigests 0}}'", image], { shell: true, stdio: 'pipe' });
         [name, digest] = imageNameAndDigest.trim().split('@');
     } catch(err) {
-        if(err.result.indexOf('Template parsing error') > 0) {
+        if(err.result.toLowerCase().indexOf('template parsing error') > 0) {
             name = 'N/A';
             digest = 'N/A';
         } else {
@@ -563,7 +563,7 @@ async function getImageInfo(imageTagOrContainerName) {
 }
 
 
-// Command to start a container for processing. Returns a container name with a 
+// Command to start a container for processing. Returns a container name with a
 // specific format that can be used to detect whether an image tag or container
 // name is passed into the content extractor functions.
 async function startContainerForProcessing(imageTag) {
@@ -577,8 +577,8 @@ async function removeProcessingContainer(containerName) {
     await asyncUtils.spawn('docker', ['rm', '-f', containerName], { shell: true, stdio: 'inherit' });
 }
 
-// Utility that executes commands inside a container. If a specially formatted container 
-// name is passed in, the function will use "docker exec" and otherwise use "docker run" 
+// Utility that executes commands inside a container. If a specially formatted container
+// name is passed in, the function will use "docker exec" and otherwise use "docker run"
 // since this means an image tag was passed in instead.
 async function getCommandOutputFromContainer(imageTagOrContainerName, command, forceRoot, userName) {
     const runArgs = isContainerName(imageTagOrContainerName) ?
@@ -614,7 +614,7 @@ function getLinuxPackageManagerForDistro(distroId)
 function getLinuxPackageManagerDependencies(dependencies, distroInfo) {
     if(dependencies[distroInfo.id]) {
         return dependencies[distroInfo.id];
-    } 
+    }
     return dependencies[getLinuxPackageManagerForDistro(distroInfo.id)]
 }
 
@@ -637,7 +637,7 @@ async function getAllContentInfo(imageTag, dependencies, imageId) {
             other: await getOtherComponentInfo(containerName, dependencies.other, 'other'),
             languages: await getOtherComponentInfo(containerName, dependencies.languages, 'languages', imageId),
             manual: dependencies.manual
-        }    
+        }
         await removeProcessingContainer(containerName);
         return contents;
     } catch (e) {
