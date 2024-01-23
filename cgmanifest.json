@@ -1,5 +1,64 @@
 {
-  "Registrations": [
-  ],
-  "Version": 1
+    "Registrations": [
+        {
+            "Component": {
+                "Type": "npm",
+                "Npm": {
+                    "Name": "eslint",
+                    "Version": "8.56.0"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "f7b647e1b13ed9cd2f34f3559c112e61b8c03108"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "nvm",
+                    "repositoryUrl": "https://github.com/nvm-sh/nvm.git",
+                    "commitHash": "bab86d5de571015b63fd8fc30b47bbe072a1290e"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "git",
+                    "Version": "2.43.0",
+                    "DownloadUrl": "https://github.com/git/git"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "lts-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "current-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        }
+    ],
+    "Version": 1
 }
