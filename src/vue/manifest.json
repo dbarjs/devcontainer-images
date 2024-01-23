@@ -16,13 +16,10 @@
     ],
     "variantTags": {
       "lts": [
-        "vue-devcontainer:${VERSION}-lts",
-        "vue-devcontainer:${VERSION}-iron",
-        "vue-devcontainer:${VERSION}-20"
+        "vue-devcontainer:${VERSION}-lts"
       ],
       "current": [
-        "vue-devcontainer:${VERSION}-current",
-        "vue-devcontainer:${VERSION}-21"
+        "vue-devcontainer:${VERSION}-current"
       ]
     }
   },
