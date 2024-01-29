@@ -10,7 +10,7 @@
 
 ## Variant: current
 
-**Digest:** N/A
+**Digest:** sha256:e3e88a94d683e2dd538e6b4b391f1af78a37ff16b0593c79e944d7f560457e9f
 
 **Tags:**
 ```
@@ -18,13 +18,14 @@ docker.io/dbarjs/base-node-devcontainer:dev-current
 docker.io/dbarjs/base-node-devcontainer:21
 docker.io/dbarjs/base-node-devcontainer:21-bookworm
 docker.io/dbarjs/base-node-devcontainer:bookworm
+docker.io/dbarjs/base-node-devcontainer:current
 docker.io/dbarjs/base-node-devcontainer:current-bookworm
 docker.io/dbarjs/base-node-devcontainer:latest
 docker.io/dbarjs/base-node-devcontainer:dev
-docker.io/dbarjs/base-node-devcontainer:dev-bookworm
 docker.io/dbarjs/base-node-devcontainer:dev-21
 docker.io/dbarjs/base-node-devcontainer:dev-21-bookworm
 docker.io/dbarjs/base-node-devcontainer:dev-bookworm
+docker.io/dbarjs/base-node-devcontainer:dev-current
 docker.io/dbarjs/base-node-devcontainer:dev-current-bookworm
 docker.io/dbarjs/base-node-devcontainer:dev-latest
 ```
@@ -32,7 +33,7 @@ docker.io/dbarjs/base-node-devcontainer:dev-latest
 
 **Linux distribution:** Debian GNU/Linux 12 (bookworm)
 
-**Architectures:** linux/amd64, linux/arm64
+**Architectures:** linux/amd64
 
 **Available (non-root) user:** node
 
@@ -47,20 +48,14 @@ docker.io/dbarjs/base-node-devcontainer:dev-latest
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
-
-**Npm globally installed tools and packages**
-
-| Tool / package | Version |
-|----------------|---------|
-| eslint | 8.56.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 
@@ -107,7 +102,7 @@ docker.io/dbarjs/base-node-devcontainer:dev-latest
 
 ## Variant: lts
 
-**Digest:** N/A
+**Digest:** sha256:302c2005cbba0846915e7fcf9cfb19ec98a0b2adb7027774246dcffcc24ee0da
 
 **Tags:**
 ```
@@ -116,12 +111,14 @@ docker.io/dbarjs/base-node-devcontainer:20
 docker.io/dbarjs/base-node-devcontainer:20-bookworm
 docker.io/dbarjs/base-node-devcontainer:iron
 docker.io/dbarjs/base-node-devcontainer:iron-bookworm
+docker.io/dbarjs/base-node-devcontainer:lts
 docker.io/dbarjs/base-node-devcontainer:lts-iron
 docker.io/dbarjs/base-node-devcontainer:lts-bookworm
 docker.io/dbarjs/base-node-devcontainer:dev-20
 docker.io/dbarjs/base-node-devcontainer:dev-20-bookworm
 docker.io/dbarjs/base-node-devcontainer:dev-iron
 docker.io/dbarjs/base-node-devcontainer:dev-iron-bookworm
+docker.io/dbarjs/base-node-devcontainer:dev-lts
 docker.io/dbarjs/base-node-devcontainer:dev-lts-iron
 docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
 ```
@@ -129,7 +126,7 @@ docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
 
 **Linux distribution:** Debian GNU/Linux 12 (bookworm)
 
-**Architectures:** linux/amd64, linux/arm64
+**Architectures:** linux/amd64
 
 **Available (non-root) user:** node
 
@@ -144,20 +141,14 @@ docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
-
-**Npm globally installed tools and packages**
-
-| Tool / package | Version |
-|----------------|---------|
-| eslint | 8.56.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 

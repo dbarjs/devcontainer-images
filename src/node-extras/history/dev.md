@@ -1,8 +1,8 @@
-# [vue](https://github.com/dbarjs/devcontainer-images/tree/main/src/vue)
+# [node-extras](https://github.com/dbarjs/devcontainer-images/tree/main/src/node-extras)
 
 **Image version:** dev
 
-**Source release/branch:** [main](https://github.com/dbarjs/devcontainer-images/tree/main/src/vue)
+**Source release/branch:** [main](https://github.com/dbarjs/devcontainer-images/tree/main/src/node-extras)
 
 **Image variations:**
 - [current](#variant-current)
@@ -10,24 +10,24 @@
 
 ## Variant: current
 
-**Digest:** sha256:ecbd82bf4ee30eb623bd16ed83867d0ff452ddb9a8fc472e959082b610206990
+**Digest:** sha256:99d0b137fdf63fb74b9c86ded8e87a0c0c95209697b5ff1c6d7994f514dcb78d
 
 **Tags:**
 ```
-docker.io/dbarjs/vue-devcontainer:dev-current
-docker.io/dbarjs/vue-devcontainer:21
-docker.io/dbarjs/vue-devcontainer:21-bookworm
-docker.io/dbarjs/vue-devcontainer:bookworm
-docker.io/dbarjs/vue-devcontainer:current
-docker.io/dbarjs/vue-devcontainer:current-bookworm
-docker.io/dbarjs/vue-devcontainer:latest
-docker.io/dbarjs/vue-devcontainer:dev
-docker.io/dbarjs/vue-devcontainer:dev-21
-docker.io/dbarjs/vue-devcontainer:dev-21-bookworm
-docker.io/dbarjs/vue-devcontainer:dev-bookworm
-docker.io/dbarjs/vue-devcontainer:dev-current
-docker.io/dbarjs/vue-devcontainer:dev-current-bookworm
-docker.io/dbarjs/vue-devcontainer:dev-latest
+docker.io/dbarjs/node-extras-devcontainer:dev-current
+docker.io/dbarjs/node-extras-devcontainer:21
+docker.io/dbarjs/node-extras-devcontainer:21-bookworm
+docker.io/dbarjs/node-extras-devcontainer:bookworm
+docker.io/dbarjs/node-extras-devcontainer:current
+docker.io/dbarjs/node-extras-devcontainer:current-bookworm
+docker.io/dbarjs/node-extras-devcontainer:latest
+docker.io/dbarjs/node-extras-devcontainer:dev
+docker.io/dbarjs/node-extras-devcontainer:dev-21
+docker.io/dbarjs/node-extras-devcontainer:dev-21-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-current
+docker.io/dbarjs/node-extras-devcontainer:dev-current-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-latest
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -102,25 +102,25 @@ docker.io/dbarjs/vue-devcontainer:dev-latest
 
 ## Variant: lts
 
-**Digest:** sha256:ae449cdd9e76acf2017e76dbddb0198ff17888134689ca8a5c5f2eea99ae33e4
+**Digest:** sha256:440ce11bc37459e9b24421f9f48302f5f0214e09473410c1176e43eceb3d34af
 
 **Tags:**
 ```
-docker.io/dbarjs/vue-devcontainer:dev-lts
-docker.io/dbarjs/vue-devcontainer:20
-docker.io/dbarjs/vue-devcontainer:20-bookworm
-docker.io/dbarjs/vue-devcontainer:iron
-docker.io/dbarjs/vue-devcontainer:iron-bookworm
-docker.io/dbarjs/vue-devcontainer:lts
-docker.io/dbarjs/vue-devcontainer:lts-iron
-docker.io/dbarjs/vue-devcontainer:lts-bookworm
-docker.io/dbarjs/vue-devcontainer:dev-20
-docker.io/dbarjs/vue-devcontainer:dev-20-bookworm
-docker.io/dbarjs/vue-devcontainer:dev-iron
-docker.io/dbarjs/vue-devcontainer:dev-iron-bookworm
-docker.io/dbarjs/vue-devcontainer:dev-lts
-docker.io/dbarjs/vue-devcontainer:dev-lts-iron
-docker.io/dbarjs/vue-devcontainer:dev-lts-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-lts
+docker.io/dbarjs/node-extras-devcontainer:20
+docker.io/dbarjs/node-extras-devcontainer:20-bookworm
+docker.io/dbarjs/node-extras-devcontainer:iron
+docker.io/dbarjs/node-extras-devcontainer:iron-bookworm
+docker.io/dbarjs/node-extras-devcontainer:lts
+docker.io/dbarjs/node-extras-devcontainer:lts-iron
+docker.io/dbarjs/node-extras-devcontainer:lts-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-20
+docker.io/dbarjs/node-extras-devcontainer:dev-20-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-iron
+docker.io/dbarjs/node-extras-devcontainer:dev-iron-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-lts
+docker.io/dbarjs/node-extras-devcontainer:dev-lts-iron
+docker.io/dbarjs/node-extras-devcontainer:dev-lts-bookworm
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -148,7 +148,7 @@ docker.io/dbarjs/vue-devcontainer:dev-lts-bookworm
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 
