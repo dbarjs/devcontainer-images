@@ -1,8 +1,8 @@
-# [base-node](https://github.com/dbarjs/devcontainer-images/tree/main/src/base-node)
+# [node-extras](https://github.com/dbarjs/devcontainer-images/tree/main/src/node-extras)
 
 **Image version:** dev
 
-**Source release/branch:** [main](https://github.com/dbarjs/devcontainer-images/tree/main/src/base-node)
+**Source release/branch:** [main](https://github.com/dbarjs/devcontainer-images/tree/main/src/node-extras)
 
 **Image variations:**
 - [current](#variant-current)
@@ -10,24 +10,24 @@
 
 ## Variant: current
 
-**Digest:** sha256:1da9e0f6efbd58ea710325f2696a433a3f12590d4c5432102b1d7f2c2b78a114
+**Digest:** sha256:5de6ac62072ae6c973b6696567572aa244596e600941a164ab139ee5767d230b
 
 **Tags:**
 ```
-docker.io/dbarjs/base-node-devcontainer:dev-current
-docker.io/dbarjs/base-node-devcontainer:21
-docker.io/dbarjs/base-node-devcontainer:21-bookworm
-docker.io/dbarjs/base-node-devcontainer:bookworm
-docker.io/dbarjs/base-node-devcontainer:current
-docker.io/dbarjs/base-node-devcontainer:current-bookworm
-docker.io/dbarjs/base-node-devcontainer:latest
-docker.io/dbarjs/base-node-devcontainer:dev
-docker.io/dbarjs/base-node-devcontainer:dev-21
-docker.io/dbarjs/base-node-devcontainer:dev-21-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-current
-docker.io/dbarjs/base-node-devcontainer:dev-current-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-latest
+docker.io/dbarjs/node-extras-devcontainer:dev-current
+docker.io/dbarjs/node-extras-devcontainer:21
+docker.io/dbarjs/node-extras-devcontainer:21-bookworm
+docker.io/dbarjs/node-extras-devcontainer:bookworm
+docker.io/dbarjs/node-extras-devcontainer:current
+docker.io/dbarjs/node-extras-devcontainer:current-bookworm
+docker.io/dbarjs/node-extras-devcontainer:latest
+docker.io/dbarjs/node-extras-devcontainer:dev
+docker.io/dbarjs/node-extras-devcontainer:dev-21
+docker.io/dbarjs/node-extras-devcontainer:dev-21-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-current
+docker.io/dbarjs/node-extras-devcontainer:dev-current-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-latest
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -42,13 +42,13 @@ docker.io/dbarjs/base-node-devcontainer:dev-latest
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 21.6.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 21.6.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -72,13 +72,13 @@ docker.io/dbarjs/base-node-devcontainer:dev-latest
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u4 |
+| libc6 | 2.36-9+deb12u3 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u1 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u4 |
+| locales | 2.36-9+deb12u3 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -102,25 +102,25 @@ docker.io/dbarjs/base-node-devcontainer:dev-latest
 
 ## Variant: lts
 
-**Digest:** sha256:c7cc1495bcbbf8521d8ed27cedb7a9f68dc9de5d1b77edff7e21067de75d9634
+**Digest:** sha256:2c8e9a44428394d10a6a35be89c794fd324fa4af536801edca53c42e703425c3
 
 **Tags:**
 ```
-docker.io/dbarjs/base-node-devcontainer:dev-lts
-docker.io/dbarjs/base-node-devcontainer:20
-docker.io/dbarjs/base-node-devcontainer:20-bookworm
-docker.io/dbarjs/base-node-devcontainer:iron
-docker.io/dbarjs/base-node-devcontainer:iron-bookworm
-docker.io/dbarjs/base-node-devcontainer:lts
-docker.io/dbarjs/base-node-devcontainer:lts-iron
-docker.io/dbarjs/base-node-devcontainer:lts-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-20
-docker.io/dbarjs/base-node-devcontainer:dev-20-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-iron
-docker.io/dbarjs/base-node-devcontainer:dev-iron-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-lts
-docker.io/dbarjs/base-node-devcontainer:dev-lts-iron
-docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-lts
+docker.io/dbarjs/node-extras-devcontainer:20
+docker.io/dbarjs/node-extras-devcontainer:20-bookworm
+docker.io/dbarjs/node-extras-devcontainer:iron
+docker.io/dbarjs/node-extras-devcontainer:iron-bookworm
+docker.io/dbarjs/node-extras-devcontainer:lts
+docker.io/dbarjs/node-extras-devcontainer:lts-iron
+docker.io/dbarjs/node-extras-devcontainer:lts-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-20
+docker.io/dbarjs/node-extras-devcontainer:dev-20-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-iron
+docker.io/dbarjs/node-extras-devcontainer:dev-iron-bookworm
+docker.io/dbarjs/node-extras-devcontainer:dev-lts
+docker.io/dbarjs/node-extras-devcontainer:dev-lts-iron
+docker.io/dbarjs/node-extras-devcontainer:dev-lts-bookworm
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -141,7 +141,7 @@ docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -165,13 +165,13 @@ docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u4 |
+| libc6 | 2.36-9+deb12u3 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u1 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u4 |
+| locales | 2.36-9+deb12u3 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
