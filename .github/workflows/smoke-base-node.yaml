@@ -1,4 +1,4 @@
-name: Smoke test "base-node" build
+name: Smoke test "node" build
 
 on:
   workflow_dispatch:
@@ -7,8 +7,8 @@ on:
     - main
   pull_request:
     paths:
-      - src/base-node/**
-      - .github/workflows/smoke-base-node.yaml
+      - src/node/**
+      - .github/workflows/smoke-node.yaml
       - .github/actions/**
       - build/**
 jobs:
@@ -27,4 +27,4 @@ jobs:
       id: smoke_test
       uses: ./.github/actions/smoke-test
       with:
-        image: base-node
+        image: node
