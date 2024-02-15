@@ -4,7 +4,8 @@
     "dockerfile": "Dockerfile"
   },
   "features": {
-
+    "ghcr.io/dbarjs/devcontainer-features/code-essentials:latest": { },
+    "ghcr.io/dbarjs/devcontainer-features/code-extras:latest": { }
   },
 
   // Configure tool-specific properties.
@@ -23,84 +24,7 @@
         "antfu.vite"
       ],
       "settings": {
-        // ========== UX - Search ==========
-        "search.exclude": {
-          "**/*.snap": true,
-          "**/*.svg": true,
-          "**/.git": true,
-          "**/.github": false,
-          "**/.nuxt": true,
-          "**/.output": true,
-          "**/.pnpm": true,
-          "**/.vscode": true,
-          "**/.yarn": true,
-          "**/assets": true,
-          "**/bower_components": true,
-          "**/dist/**": true,
-          "**/logs": true,
-          "**/node_modules": true,
-          "**/out/**": true,
-          "**/package-lock.json": true,
-          "**/pnpm-lock.yaml": true,
-          "**/public": true,
-          "**/temp": true,
-          "**/yarn.lock": true,
-          "**/CHANGELOG*": true,
-          "**/LICENSE*": true
-        },
-
         // ========== Extension Settings ==========
-        "github.copilot.enable": {
-          "*": true,
-          "markdown": true,
-          "plaintext": false
-        },
-        "gitlens.codeLens.authors.enabled": false,
-        "gitlens.codeLens.enabled": false,
-        "gitlens.codeLens.recentChange.enabled": false,
-        "gitlens.menus": {
-          "editor": {
-            "blame": false,
-            "clipboard": true,
-            "compare": true,
-            "history": false,
-            "remote": false
-          },
-          "editorGroup": {
-            "blame": true,
-            "compare": false
-          },
-          "editorTab": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true
-          },
-          "explorer": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true
-          },
-          "scm": {
-            "authors": true
-          },
-          "scmGroup": {
-            "compare": true,
-            "openClose": true,
-            "stash": true
-          },
-          "scmGroupInline": {
-            "stash": true
-          },
-          "scmItem": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": false,
-            "stash": true
-          }
-        },
         "iconify.annotations": true,
         "iconify.inplace": true,
         "i18n-ally.autoDetection": false,
