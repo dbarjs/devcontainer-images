@@ -14,7 +14,6 @@
     ],
     "variantTags": {
       "current": [
-        "vue-devcontainer:${VERSION}-current",
         "vue-devcontainer:${VERSION}"
       ]
     }
