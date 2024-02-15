@@ -4,17 +4,20 @@
     "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {
+    "ghcr.io/devcontainers/features/common-utils:2.4.2": {
       "installZsh": "true",
       "username": "node",
       "upgradePackages": "true"
     },
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:1.4.0": {
       "version": "none"
     },
-    "ghcr.io/devcontainers/features/git:1": {
-      // "version": "latest"
-      // "ppa": "true"
+    "ghcr.io/devcontainers/features/git:1.2.0": { },
+    "ghcr.io/devcontainers/features/github-cli:1": { },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": { },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": { },
+    "ghcr.io/dbarjs/devcontainer-features/zsh:latest": {
+      "username": "node"
     }
   },
 

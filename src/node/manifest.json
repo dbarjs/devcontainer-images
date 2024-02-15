@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "variants": [
+    "current",
+    "lts"
+  ],
+  "build": {
+    "latest": "current",
+    "rootDistro": "debian",
+    "architectures": [
+      "linux/amd64"
+    ],
+    "tags": [
+      "node-devcontainer:${VERSION}-${VARIANT}"
+    ],
+    "variantTags": {
+      "current": [
+        "node-devcontainer:${VERSION}-current",
+        "node-devcontainer:${VERSION}"
+      ],
+      "lts": [
+        "node-devcontainer:${VERSION}-lts"
+      ]
+    }
+  },
+  "dependencies": {
+    "image": "node:${VARIANT}-bookworm",
+    "imageLink": "https://hub.docker.com/_/node",
+    "apt": [
+      {
+        "cgIgnore": false,
+        "name": "yarn"
+      }
+    ],
+    "git": {
+      "Oh My Zsh!": "/home/node/.oh-my-zsh",
+      "nvm": "/usr/local/share/nvm"
+    },
+    "languages": {
+      "Node.js": {
+        "cgIgnore": true,
+        "path": "/usr/local"
+      }
+    },
+    "other": {
+      "git": { }
+    }
+  }
+}
