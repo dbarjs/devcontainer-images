@@ -24,9 +24,9 @@
       ]
     },
     "ghcr.io/dbarjs/devcontainer-features/zsh:latest": {
-      "version": "0.1.2",
-      "resolved": "ghcr.io/dbarjs/devcontainer-features/zsh@sha256:e06bf27047bd36d7e5893e79babef646986cf4954f00f7e9685a7c3487bdeb46",
-      "integrity": "sha256:e06bf27047bd36d7e5893e79babef646986cf4954f00f7e9685a7c3487bdeb46"
+      "version": "0.2.0",
+      "resolved": "ghcr.io/dbarjs/devcontainer-features/zsh@sha256:31ffe8db9069ca3d840ff12256ad527c586c667f74010845ae60e69828e0c2cd",
+      "integrity": "sha256:31ffe8db9069ca3d840ff12256ad527c586c667f74010845ae60e69828e0c2cd"
     },
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
       "version": "2.9.0",
