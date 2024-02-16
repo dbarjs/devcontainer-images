@@ -6,6 +6,7 @@
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2.4.2": {
       "installZsh": "true",
+      "installOhMyZshConfig": "false",
       "username": "node",
       "upgradePackages": "true"
     },
