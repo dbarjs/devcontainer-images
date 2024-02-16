@@ -1,25 +1,17 @@
 {
   "features": {
     "ghcr.io/dbarjs/devcontainer-features/code-essentials:latest": {
-      "version": "0.1.1",
-      "resolved": "ghcr.io/dbarjs/devcontainer-features/code-essentials@sha256:cdd289a3ee435a864452ca49dbbc1c76b9c583f54188d2c457765a9f6c709640",
-      "integrity": "sha256:cdd289a3ee435a864452ca49dbbc1c76b9c583f54188d2c457765a9f6c709640",
-      "dependsOn": [
-        "ghcr.io/dbarjs/devcontainer-features/zsh:latest"
-      ]
+      "version": "0.1.2",
+      "resolved": "ghcr.io/dbarjs/devcontainer-features/code-essentials@sha256:ce9c1b90450668058023bbbfe43b447fbe4576ff28679c6735ea5a02d2d4508b",
+      "integrity": "sha256:ce9c1b90450668058023bbbfe43b447fbe4576ff28679c6735ea5a02d2d4508b"
     },
     "ghcr.io/dbarjs/devcontainer-features/code-extras:latest": {
-      "version": "0.1.1",
-      "resolved": "ghcr.io/dbarjs/devcontainer-features/code-extras@sha256:8585c4f0efcc03731d84e96e587f4b583056d166774add45bc661e7d83c61886",
-      "integrity": "sha256:8585c4f0efcc03731d84e96e587f4b583056d166774add45bc661e7d83c61886",
+      "version": "0.1.2",
+      "resolved": "ghcr.io/dbarjs/devcontainer-features/code-extras@sha256:b1578a11bda8bda406da51d325920a8013e6c17a05927cb3dd265354bc1af382",
+      "integrity": "sha256:b1578a11bda8bda406da51d325920a8013e6c17a05927cb3dd265354bc1af382",
       "dependsOn": [
-        "ghcr.io/dbarjs/devcontainer-features/code-essentials:0.1.1"
+        "ghcr.io/dbarjs/devcontainer-features/code-essentials:0.1.2"
       ]
-    },
-    "ghcr.io/dbarjs/devcontainer-features/zsh:latest": {
-      "version": "0.2.0",
-      "resolved": "ghcr.io/dbarjs/devcontainer-features/zsh@sha256:31ffe8db9069ca3d840ff12256ad527c586c667f74010845ae60e69828e0c2cd",
-      "integrity": "sha256:31ffe8db9069ca3d840ff12256ad527c586c667f74010845ae60e69828e0c2cd"
     }
   }
 }
