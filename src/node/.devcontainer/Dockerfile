@@ -4,6 +4,7 @@ FROM node:${VARIANT}-bookworm
 
 ARG USERNAME=node
 ARG NPM_GLOBAL=/usr/local/share/npm-global
+ARG NODE_MODULES="@devcontainers/cli @antfu/ni"
 
 # Add NPM global to PATH.
 ENV PATH=${NPM_GLOBAL}/bin:${PATH}
@@ -19,6 +20,7 @@ RUN \
     && chmod g+s ${NPM_GLOBAL} \
     && npm config -g set prefix ${NPM_GLOBAL} \
     && su ${USERNAME} -c "npm config -g set prefix ${NPM_GLOBAL}" \
+    && su ${USERNAME} -c "npm install -g ${NODE_MODULES}" \
     && npm cache clean --force > /dev/null 2>&1
 
 # [Optional] Uncomment this section to install additional OS packages.
