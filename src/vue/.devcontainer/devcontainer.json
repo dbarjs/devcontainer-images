@@ -4,35 +4,13 @@
     "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/dbarjs/devcontainer-features/code-essentials:latest": { },
-    "ghcr.io/dbarjs/devcontainer-features/code-extras:latest": { }
+    "ghcr.io/dbarjs/devcontainer-features/code-essentials:0.1.3": { },
+    "ghcr.io/dbarjs/devcontainer-features/code-extras:0.1.3": { },
+    "ghcr.io/dbarjs/devcontainer-features/code-vue:0.0.1": { }
   },
 
   // Configure tool-specific properties.
-  "customizations": {
-    // Configure properties specific to VS Code.
-    "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
-      "extensions": [
-        "antfu.iconify",
-        "lokalise.i18n-ally",
-        "antfu.browse-lite",
-        "antfu.slidev",
-        "antfu.unocss",
-        "bradlc.vscode-tailwindcss",
-        "Vue.volar",
-        "antfu.vite"
-      ],
-      "settings": {
-        // ========== Extension Settings ==========
-        "iconify.annotations": true,
-        "iconify.inplace": true,
-        "i18n-ally.autoDetection": false,
-        "i18n-ally.displayLanguage": "en",
-        "svg.preview.mode": "svg"
-      }
-    }
-  },
+  // "customizations": { },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],

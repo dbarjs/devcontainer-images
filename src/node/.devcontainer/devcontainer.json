@@ -22,25 +22,9 @@
   "customizations": {
     // Configure properties specific to VS Code.
     "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
-      "extensions": [
-        "dbaeumer.vscode-eslint",
-        "editorconfig.editorconfig",
-        "esbenp.prettier-vscode"
-      ],
+      "extensions": [ ],
 
-      "settings": {
-        // ========== Lint & Format ==========
-        "editor.formatOnSave": false,
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "files.eol": "\n",
-        "files.insertFinalNewline": true,
-
-        // ========== antfu/eslint-config ==========
-        "eslint.experimental.useFlatConfig": true,
-        "prettier.enable": false
-      }
+      "settings": { }
     }
   },
 
