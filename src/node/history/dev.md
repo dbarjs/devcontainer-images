@@ -1,8 +1,8 @@
-# [base-node](https://github.com/dbarjs/devcontainer-images/tree/main/src/base-node)
+# [node](https://github.com/dbarjs/devcontainer-images/tree/main/src/node)
 
 **Image version:** dev
 
-**Source release/branch:** [main](https://github.com/dbarjs/devcontainer-images/tree/main/src/base-node)
+**Source release/branch:** [main](https://github.com/dbarjs/devcontainer-images/tree/main/src/node)
 
 **Image variations:**
 - [current](#variant-current)
@@ -10,29 +10,19 @@
 
 ## Variant: current
 
-**Digest:** N/A
+**Digest:** sha256:87dadac115f3d56f15534f8cc90e21b775e7418d06fa4e76b181c5efd0172256
 
 **Tags:**
 ```
-docker.io/dbarjs/base-node-devcontainer:dev-current
-docker.io/dbarjs/base-node-devcontainer:21
-docker.io/dbarjs/base-node-devcontainer:21-bookworm
-docker.io/dbarjs/base-node-devcontainer:bookworm
-docker.io/dbarjs/base-node-devcontainer:current-bookworm
-docker.io/dbarjs/base-node-devcontainer:latest
-docker.io/dbarjs/base-node-devcontainer:dev
-docker.io/dbarjs/base-node-devcontainer:dev-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-21
-docker.io/dbarjs/base-node-devcontainer:dev-21-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-current-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-latest
+docker.io/dbarjs/node-devcontainer:dev-current
+docker.io/dbarjs/node-devcontainer:dev-current
+docker.io/dbarjs/node-devcontainer:dev
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
 **Linux distribution:** Debian GNU/Linux 12 (bookworm)
 
-**Architectures:** linux/amd64, linux/arm64
+**Architectures:** linux/amd64
 
 **Available (non-root) user:** node
 
@@ -41,26 +31,20 @@ docker.io/dbarjs/base-node-devcontainer:dev-latest
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 21.6.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 21.6.2 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fcab8f161139d04fb1137be815d8130584a99713 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
-
-**Npm globally installed tools and packages**
-
-| Tool / package | Version |
-|----------------|---------|
-| eslint | 8.56.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 
@@ -77,13 +61,13 @@ docker.io/dbarjs/base-node-devcontainer:dev-latest
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u3 |
+| libc6 | 2.36-9+deb12u4 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u1 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u3 |
+| locales | 2.36-9+deb12u4 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -107,29 +91,18 @@ docker.io/dbarjs/base-node-devcontainer:dev-latest
 
 ## Variant: lts
 
-**Digest:** N/A
+**Digest:** sha256:ca46abb0ac4a5c8dc0009ddda01ea45f02dd7325a72bd7c063cc7bdd5a66ba51
 
 **Tags:**
 ```
-docker.io/dbarjs/base-node-devcontainer:dev-lts
-docker.io/dbarjs/base-node-devcontainer:20
-docker.io/dbarjs/base-node-devcontainer:20-bookworm
-docker.io/dbarjs/base-node-devcontainer:iron
-docker.io/dbarjs/base-node-devcontainer:iron-bookworm
-docker.io/dbarjs/base-node-devcontainer:lts-iron
-docker.io/dbarjs/base-node-devcontainer:lts-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-20
-docker.io/dbarjs/base-node-devcontainer:dev-20-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-iron
-docker.io/dbarjs/base-node-devcontainer:dev-iron-bookworm
-docker.io/dbarjs/base-node-devcontainer:dev-lts-iron
-docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
+docker.io/dbarjs/node-devcontainer:dev-lts
+docker.io/dbarjs/node-devcontainer:dev-lts
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
 **Linux distribution:** Debian GNU/Linux 12 (bookworm)
 
-**Architectures:** linux/amd64, linux/arm64
+**Architectures:** linux/amd64
 
 **Available (non-root) user:** node
 
@@ -138,26 +111,20 @@ docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 20.11.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 20.11.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fcab8f161139d04fb1137be815d8130584a99713 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
-
-**Npm globally installed tools and packages**
-
-| Tool / package | Version |
-|----------------|---------|
-| eslint | 8.56.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 
@@ -174,13 +141,13 @@ docker.io/dbarjs/base-node-devcontainer:dev-lts-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u3 |
+| libc6 | 2.36-9+deb12u4 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u1 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u3 |
+| locales | 2.36-9+deb12u4 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
