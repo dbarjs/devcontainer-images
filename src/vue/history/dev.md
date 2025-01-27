@@ -1,26 +1,26 @@
-# [ts-node](https://github.com/dbarjs/devcontainer-images/tree/main/src/ts-node)
+# [vue](https://github.com/dbarjs/devcontainer-images/tree/main/src/vue)
 
 **Image version:** dev
 
-**Source release/branch:** [main](https://github.com/dbarjs/devcontainer-images/tree/main/src/ts-node)
+**Source release/branch:** [main](https://github.com/dbarjs/devcontainer-images/tree/main/src/vue)
 
 **Image variations:**
-- [lts](#variant-lts)
+- [current](#variant-current)
 
-## Variant: lts
+## Variant: current
 
-**Digest:** N/A
+**Digest:** sha256:9c021dbfe3188241dab31dfef18d78718c32dbaa95183ba77d26ee1a71ca75d6
 
 **Tags:**
 ```
-docker.io/dbarjs/ts-node-devcontainer:dev-lts
-docker.io/dbarjs/ts-node-devcontainer:dev-lts
+docker.io/dbarjs/vue-devcontainer:dev-current
+docker.io/dbarjs/vue-devcontainer:dev
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
 **Linux distribution:** Debian GNU/Linux 12 (bookworm)
 
-**Architectures:** linux/amd64, linux/arm64
+**Architectures:** linux/amd64
 
 **Available (non-root) user:** node
 
@@ -29,29 +29,20 @@ docker.io/dbarjs/ts-node-devcontainer:dev-lts
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 20.11.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 5.3.3 | /usr/local/share/npm-global |
+| [Node.js](https://nodejs.org/en/) | 21.6.2 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 40ff950fcd081078a8cd3de0eaab784f85c681d5 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
-
-**Npm globally installed tools and packages**
-
-| Tool / package | Version |
-|----------------|---------|
-| eslint | 8.56.0 |
-| tslint-to-eslint-config | 2.14.3 |
-| typescript | 5.3.3 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 
@@ -68,13 +59,13 @@ docker.io/dbarjs/ts-node-devcontainer:dev-lts
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u3 |
+| libc6 | 2.36-9+deb12u4 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u1 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u3 |
+| locales | 2.36-9+deb12u4 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
